@@ -1,0 +1,38 @@
+{
+  "name": "isaac-uwamahoro-portfolio",
+  "version": "1.0.0",
+  "description": "Modern portfolio website for Isaac Uwamahoro - Industrial Electrician, Automation Technician, and Web Developer",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -p 8000 -o",
+    "dev": "http-server -p 8000 -o -c-1",
+    "build": "echo 'No build process required for static site'",
+    "deploy": "echo 'Deploy to your preferred hosting service'"
+  },
+  "keywords": [
+    "portfolio",
+    "web-development",
+    "industrial-automation",
+    "electricity",
+    "responsive-design",
+    "modern-ui"
+  ],
+  "author": "Isaac Uwamahoro",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isaac-uwamahoro/portfolio.git"
+  },
+  "homepage": "https://isaac-uwamahoro.github.io/portfolio",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+} 

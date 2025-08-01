@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Isaac Uwamahoro - Industrial Electrician, Automation Technician, and Web Developer. Professional portfolio showcasing skills in electricity, automation (CIMA), and web development.">
+    <meta name="keywords" content="Isaac Uwamahoro, Industrial Electrician, Automation Technician, Web Developer, CIMA, Industrial Automation, Frontend Development, React, JavaScript">
+    <meta name="author" content="Isaac Uwamahoro">
+    <meta property="og:title" content="Isaac Uwamahoro - Portfolio">
+    <meta property="og:description" content="Professional portfolio of Isaac Uwamahoro - Industrial Electrician, Automation Technician, and Web Developer">
+    <meta property="og:type" content="website">
+    <title>Isaac Uwamahoro - Portfolio</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>IU</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#cv" class="nav-link">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="circuit-grid"></div>
+            <div class="floating-elements">
+                <div class="element" data-speed="2"></div>
+                <div class="element" data-speed="1.5"></div>
+                <div class="element" data-speed="3"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text" data-aos="fade-up">
+                <h1 class="hero-title">Hi, I'm Isaac Uwamahoro</h1>
+                <p class="hero-subtitle">Industrial Electrician | Automation Technician | Web Developer</p>
+                <div class="typing-container">
+                    <span class="typing-text">I'm a </span>
+                    <span class="typing-words">
+                        <span class="word">Electrician</span>
+                        <span class="word">Automation Tech</span>
+                        <span class="word">Web Developer</span>
+                        <span class="word">AI Builder</span>
+                    </span>
+                </div>
+                <button class="cta-button" onclick="scrollToSection('projects')">
+                    Explore My Work
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <p class="about-bio">
+                        My journey began in the world of industrial electricity, where I learned the fundamentals of power systems and electrical safety. 
+                        This foundation led me to discover the fascinating realm of industrial automation (CIMA), where I developed skills in PLC programming, 
+                        sensor integration, and predictive maintenance systems.
+                    </p>
+                    <p class="about-bio">
+                        Driven by curiosity and the desire to create digital solutions, I ventured into web development, completing FreeCodeCamp's curriculum 
+                        and building full-stack applications. Today, I combine all three disciplines to create innovative solutions that bridge the gap between 
+                        physical industrial systems and modern web technologies.
+                    </p>
+                </div>
+                <div class="timeline" data-aos="fade-left">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Industrial Electricity Diploma</h3>
+                            <p>Foundation in electrical systems and safety</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>CIMA Training</h3>
+                            <p>Industrial automation and PLC programming</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>FreeCodeCamp Certification</h3>
+                            <p>Full-stack web development curriculum</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Glide App Development</h3>
+                            <p>No-code automation solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fun-fact" data-aos="zoom-in">
+                <div class="fun-fact-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="fun-fact-content">
+                    <h3>Did You Know?</h3>
+                    <p>I can troubleshoot an electrical circuit and debug a React component with equal enthusiasm! The logical thinking required in both fields is surprisingly similar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Skills & Expertise</h2>
+            <div class="skills-tabs" data-aos="fade-up">
+                <button class="tab-button active" data-tab="electricity">
+                    <i class="fas fa-bolt"></i>
+                    Electricity
+                </button>
+                <button class="tab-button" data-tab="automation">
+                    <i class="fas fa-cogs"></i>
+                    Automation (CIMA)
+                </button>
+                <button class="tab-button" data-tab="webdev">
+                    <i class="fas fa-code"></i>
+                    Web Development
+                </button>
+            </div>
+            <div class="skills-content">
+                <div class="skills-panel active" id="electricity">
+                    <div class="skills-grid">
+                        <div class="skill-card" data-aos="zoom-in">
+                            <i class="fas fa-motor"></i>
+                            <h3>Motor Control</h3>
+                            <p>AC/DC motor installation and maintenance</p>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in">
+                            <i class="fas fa-plug"></i>
+                            <h3>Electrical Systems</h3>
+                            <p>Power distribution and circuit design</p>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Safety & Standards</h3>
+                            <p>Habilitation BS, SST, electrical safety</p>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in">
+                            <i class="fas fa-tools"></i>
+                            <h3>Troubleshooting</h3>
+                            <p>Diagnostic and repair procedures</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-panel" id="automation">
+                    <div class="skills-grid">
+                        <div class="skill-card" data-aos="zoom-in">
+                            <i class="fas fa-microchip"></i>
+                            <h3>PLC Programming</h3>
+                            <p>Ladder logic and automation control</p>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in">
+                            <i class="fas fa-sensor"></i>
+                            <h3>Sensor Integration</h3>
+                            <p>IoT sensors and data collection</p>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Predictive Maintenance</h3>
+                            <p>Data analysis and system monitoring</p>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in">
+                            <i class="fas fa-robot"></i>
+                            <h3>Industrial Robotics</h3>
+                            <p>Automation system design</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-panel" id="webdev">
+                    <div class="skills-grid">
+                        <div class="skill-card" data-aos="zoom-in">
+                            <i class="fab fa-react"></i>
+                            <h3>React.js</h3>
+                            <p>Modern frontend development</p>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in">
+                            <i class="fab fa-js-square"></i>
+                            <h3>JavaScript</h3>
+                            <p>ES6+ and modern JS features</p>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in">
+                            <i class="fab fa-git-alt"></i>
+                            <h3>Git & GitHub</h3>
+                            <p>Version control and collaboration</p>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in">
+                            <i class="fab fa-node-js"></i>
+                            <h3>Node.js</h3>
+                            <p>Backend development</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">My Projects</h2>
+            <div class="project-filters" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Projects</button>
+                <button class="filter-btn" data-filter="automation">Automation</button>
+                <button class="filter-btn" data-filter="electricity">Electricity</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="web" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Portfolio Website</h3>
+                        <p>Modern responsive portfolio showcasing multidisciplinary skills</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>T-Shirt Store</h3>
+                        <p>E-commerce platform for custom t-shirt designs</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Refugee Platform</h3>
+                        <p>Web application to support refugee communities</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Firebase</span>
+                            <span>CSS3</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="automation" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Predictive Dashboard</h3>
+                        <p>Real-time monitoring system for industrial equipment</p>
+                        <div class="project-tech">
+                            <span>PLC</span>
+                            <span>IoT</span>
+                            <span>Chart.js</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="automation" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Maintenance App</h3>
+                        <p>Glide-based maintenance tracking application</p>
+                        <div class="project-tech">
+                            <span>Glide</span>
+                            <span>Google Sheets</span>
+                            <span>Automation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="electricity" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Circuit Simulator</h3>
+                        <p>Interactive electrical circuit design tool</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>Canvas</span>
+                            <span>Physics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Section -->
+    <section id="cv" class="cv">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">My CV & Certifications</h2>
+            <div class="cv-content">
+                <div class="cv-download" data-aos="fade-right">
+                    <div class="cv-card">
+                        <div class="cv-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <h3>Download My CV</h3>
+                        <p>Get a detailed overview of my experience and qualifications</p>
+                        <button class="download-btn" onclick="downloadCV()">
+                            <i class="fas fa-download"></i>
+                            Download CV
+                        </button>
+                    </div>
+                </div>
+                <div class="certifications" data-aos="fade-left">
+                    <h3>Certifications</h3>
+                    <div class="cert-grid">
+                        <div class="cert-badge">
+                            <i class="fas fa-certificate"></i>
+                            <span>CIMA</span>
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Habilitation BS</span>
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fas fa-hard-hat"></i>
+                            <span>SST</span>
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fas fa-code"></i>
+                            <span>FreeCodeCamp</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-form" data-aos="fade-right">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="contact-email">
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:isaac7.greta@gmail.com">isaac7.greta@gmail.com</a></p>
+                            <p><i class="fas fa-phone"></i> <a href="tel:+33753157456">+33 7 53 15 74 56</a></p>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="contact-info" data-aos="fade-left">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/isaac-uwamahoro-9b7107318/" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.instagram.com/gold.web7/" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                    </div>
+                    <div class="qr-code">
+                        <div class="qr-placeholder">
+                            <i class="fas fa-qrcode"></i>
+                            <p>Scan for CV</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Isaac Uwamahoro. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
