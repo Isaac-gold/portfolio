@@ -214,6 +214,84 @@ body {
     z-index: 1;
 }
 
+.hero-image {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    width: 100%;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative;
+    z-index: 2;
+}
+
+.photo-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    min-height: 500px;
+    aspect-ratio: 3/4;
+    border-radius: 24px;
+    overflow: visible;
+    box-shadow: 
+        0 20px 60px rgba(102, 126, 234, 0.3),
+        0 10px 30px rgba(118, 75, 162, 0.2),
+        0 0 0 1px rgba(102, 126, 234, 0.1);
+    background: var(--gradient-primary);
+    padding: 4px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.photo-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 25px 70px rgba(102, 126, 234, 0.4),
+        0 15px 40px rgba(118, 75, 162, 0.3),
+        0 0 0 1px rgba(102, 126, 234, 0.2);
+}
+
+.professional-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 20px;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface-color);
+    border-radius: 20px;
+    color: var(--text-secondary);
+    padding: 2rem;
+    text-align: center;
+}
+
+.photo-placeholder i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+    opacity: 0.7;
+}
+
+.photo-placeholder p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
 .hero-title {
     font-size: 3.5rem;
     font-weight: 700;
@@ -668,6 +746,34 @@ section {
 
 .download-btn:hover {
     transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+}
+
+.cv-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.open-btn {
+    background: var(--surface-color);
+    color: var(--text-primary);
+    border: 2px solid var(--primary-color);
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.open-btn:hover {
+    transform: translateY(-2px);
+    background: var(--primary-color);
+    color: white;
     box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
 }
 

@@ -263,31 +263,103 @@ function initProjectCardEffects() {
     });
 }
 
+// CV File Path
+const CV_PATH = 'CV Pro Isaac.pdf';
+const CV_FILENAME = 'Isaac_Uwamahoro_CV.pdf';
+
 // Download CV Functionality
 function downloadCV() {
     try {
         // Create a temporary link for download
         const link = document.createElement('a');
-        link.href = './assets/documents/CV Pro Isaac.pdf'; // Path to your CV file with spaces
-        link.download = 'Isaac_Uwamahoro_CV.pdf';
-        link.target = '_blank';
+        link.href = CV_PATH;
+        link.download = CV_FILENAME;
+        link.style.display = 'none';
         
         // Trigger download
         document.body.appendChild(link);
         link.click();
-        document.body.removeChild(link);
+        
+        // Clean up
+        setTimeout(() => {
+            if (link.parentNode) {
+                document.body.removeChild(link);
+            }
+        }, 100);
         
         showNotification('CV download started!', 'success');
     } catch (error) {
         console.error('Download failed:', error);
-        showNotification('Download failed. Please try again.', 'error');
+        showNotification('Download failed. Trying to open instead...', 'error');
+        // Fallback: try opening
+        setTimeout(() => openCV(), 500);
     }
+}
+
+// Open CV in new tab
+function openCV() {
+    try {
+        window.open(CV_PATH, '_blank');
+        showNotification('Opening CV in new tab...', 'success');
+    } catch (error) {
+        console.error('Open failed:', error);
+        showNotification('Failed to open CV. Please check the file exists.', 'error');
+    }
+}
+
+// Initialize QR Code for CV
+function initQRCode() {
+    const qrPlaceholder = document.querySelector('.qr-placeholder');
+    if (!qrPlaceholder) return;
+    
+    // Get the current page URL and append CV path
+    let cvUrl;
+    if (CV_PATH.startsWith('./')) {
+        const basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
+        cvUrl = window.location.origin + basePath + CV_PATH.replace('./', '');
+    } else if (CV_PATH.startsWith('/')) {
+        cvUrl = window.location.origin + CV_PATH;
+    } else {
+        cvUrl = window.location.href.replace(/\/[^/]*$/, '/') + CV_PATH;
+    }
+    
+    // Use a QR code API to generate the QR code
+    const qrCodeImg = document.createElement('img');
+    qrCodeImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(cvUrl)}`;
+    qrCodeImg.alt = 'Scan to download CV';
+    qrCodeImg.style.width = '200px';
+    qrCodeImg.style.height = '200px';
+    qrCodeImg.style.borderRadius = '10px';
+    qrCodeImg.style.display = 'block';
+    qrCodeImg.style.margin = '0 auto';
+    
+    // Handle image load errors
+    qrCodeImg.onerror = () => {
+        qrPlaceholder.innerHTML = `
+            <i class="fas fa-qrcode" style="font-size: 4rem; color: var(--secondary-color); margin-bottom: 1rem;"></i>
+            <p style="color: var(--text-secondary); font-weight: 500;">Scan for CV</p>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem;">Click to download</p>
+        `;
+        qrPlaceholder.style.cursor = 'pointer';
+        qrPlaceholder.title = 'Click to download CV';
+        qrPlaceholder.addEventListener('click', downloadCV);
+    };
+    
+    // Replace placeholder content when image loads
+    qrCodeImg.onload = () => {
+        qrPlaceholder.innerHTML = '';
+        qrPlaceholder.appendChild(qrCodeImg);
+        qrPlaceholder.style.cursor = 'pointer';
+        qrPlaceholder.title = 'Click to download CV';
+        qrPlaceholder.addEventListener('click', downloadCV);
+    };
 }
 
 // Initialize download CV functionality
 function initDownloadCV() {
     // The download functionality is now handled by the onclick event
     // This function is kept for compatibility
+    initQRCode();
 }
 
 // Social Links Functionality
@@ -499,4 +571,6 @@ if ('serviceWorker' in navigator) {
 
 // Export functions for global access
 window.scrollToSection = scrollToSection;
-window.showNotification = showNotification; 
+window.showNotification = showNotification;
+window.downloadCV = downloadCV;
+window.openCV = openCV; 
